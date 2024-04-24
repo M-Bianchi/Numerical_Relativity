@@ -1,0 +1,95 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx, subfigure}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[absolute]{textpos}	
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage[backend=biber, style=phys, maxbibnames=3]{biblatex} 
+\usepackage[left=1.8in, right=1.8in, top=0.9in, bottom=0.9in, includefoot, heightrounded]{geometry}
+\usepackage{subfiles}
+
+
+\renewcommand\thechapter{\Roman{chapter}}
+\renewcommand\thesection{\Roman{chapter}-\Alph{section}}
+
+\counterwithout{equation}{chapter}
+\counterwithout{figure}{chapter}
+
+
+\graphicspath{{images/}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=cyan,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen}
+\urlstyle{same}
+
+\addbibresource{bibliography.bib}
+
+
+\begin{document}
+
+\pagenumbering{Roman}
+
+\thispagestyle{empty}
+
+\subfile{sections/cover}
+
+\phantom{}
+\newpage
+
+
+\section*{\huge Abstract}
+\subfile{sections/abstract}
+
+
+\phantom{}
+\newpage
+
+
+\tableofcontents
+
+\phantom{}
+\newpage
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\rightmark\hfill\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\pagenumbering{arabic}
+
+
+\chapter{Introduction}
+\subfile{sections/introduction}
+
+\phantom{}
+\newpage
+
+
+\chapter{Neural Network}
+\subfile{sections/neural_network}
+
+\chapter{Genetic Programming}
+\subfile{sections/genetic_programming}
+
+\chapter{Conclusions}
+\subfile{sections/conclusions}
+
+
+\phantom{}
+\newpage
+
+
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx, subfigure}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[absolute]{textpos}	
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage[left=1.8in, right=1.8in, top=0.9in, bottom=0.9in, includefoot, heightrounded]{geometry}
+\usepackage{subfiles}
+
+
+\renewcommand\thechapter{\Roman{chapter}}
+\renewcommand\thesection{\Roman{chapter}-\Alph{section}}
+
+%\counterwithout{equation}{chapter}
+%\counterwithout{figure}{chapter}
+
+
+\graphicspath{{images/}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=cyan,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen}
+\urlstyle{same}
+
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\rightmark\hfill\leftmark}}
+\pagenumbering{arabic}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\tableofcontents
+
+\section{Exercise 1}
+\subfile{Sections/exercise1}
+
+\section{Exercise 2}
+\subfile{Sections/exercise2}
+
+\section{Exercise 3}
+\subfile{Sections/exercise3}
+
+
+\end{document}
