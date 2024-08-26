@@ -1,3 +1,6 @@
+.history/Reports
 /Reports
 .ipynb*
 ffmpeg.exe
+TOV_example_*
+Sod_1d_400_*
